@@ -1,0 +1,54 @@
+<app-header></app-header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Look & Mood</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Escolha sua música,<br />descubra o look perfeito</h2>
+      <p>Conecte-se com uma música e descubra o look ideal para você</p>
+      <div class="buttons">
+        <button class="btn-primary">Conectar música</button>
+        <button class="btn-outline">Escolher música manualmente</button>
+      </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="features">
+      <a href="musica.html" class="card">
+        <i data-lucide="music"></i>
+        <h3>Escolha a música</h3>
+        <p>API ou manual</p>
+      </a>
+
+      <a href="/catalogo/index.html" class="card">
+        <i data-lucide="shirt"></i>
+        <h3>Receba recomendações de looks</h3>
+        <p>Descubra looks recomendados</p>
+      </a>
+
+      <a href="/perfil/index.html" class="card">
+        <i data-lucide="heart"></i>
+        <h3>Salve e compartilhe seus favoritos</h3>
+        <p>Crie sua coleção favorita</p>
+      </a>
+    </section>
+
+    <app-footer></app-foote>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>

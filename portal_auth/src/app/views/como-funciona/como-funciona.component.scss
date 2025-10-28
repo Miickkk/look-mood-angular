@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Base ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  background: linear-gradient(180deg, #01021B 0%, #080340 40%, #0E0971 100%);
+  position: relative;
+  min-height: 100vh;
+}
+
+/* ===== Canvas de Fundo ===== */
+#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+
+/* ===== Hero ===== */
+.hero {
+  text-align: center;
+  margin-top: 180px;
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  color: #cfcfcf;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+/* ===== Steps (Como Funciona) ===== */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 80px 10%;
+}
+
+.step-card {
+  background: rgba(7, 5, 64, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(94, 41, 217, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.step-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 35px rgba(94, 41, 217, 0.4);
+}
+
+.step-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 15px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  stroke: #5E29D9;
+  margin-bottom: 15px;
+}
+
+/* ===== CTA ===== */
+.cta {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(90deg, rgba(94,41,217,0.15), rgba(14,9,113,0.15));
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #5E29D9, #0E0971);
+  border: none;
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.2);
+}
+
+
+

@@ -1,0 +1,64 @@
+<app-header></app-header>
+
+<canvas id="bgCanvas"></canvas>
+
+<!-- Hero -->
+<section class="hero">
+  <h2>Descubra looks inspirados na sua vibe musical</h2>
+  <p>Explore estilos criados para combinar com suas músicas favoritas.</p>
+</section>
+
+<!-- Filtros -->
+<div class="filters">
+  <div class="custom-select">
+    <select [(ngModel)]="filtroCor" (change)="atualizarFiltros()">
+      <option value="todas">Todas as cores</option>
+      <option value="preto">Preto</option>
+      <option value="branco">Branco</option>
+      <option value="colorido">Colorido</option>
+    </select>
+  </div>
+
+  <div class="custom-select">
+    <select [(ngModel)]="filtroEstilo" (change)="atualizarFiltros()">
+      <option value="todos">Todos os estilos</option>
+      <option value="urbano">Urbano</option>
+      <option value="casual">Casual</option>
+      <option value="elegante">Elegante</option>
+    </select>
+  </div>
+
+  <div class="custom-select">
+    <select [(ngModel)]="filtroGenero" (change)="atualizarFiltros()">
+      <option value="todos">Todos os gêneros</option>
+      <option value="pop">Pop</option>
+      <option value="rock">Rock</option>
+      <option value="hiphop">Hip-Hop</option>
+      <option value="eletronica">Eletrônica</option>
+    </select>
+  </div>
+</div>
+
+<!-- Catálogo -->
+<section class="catalogo" id="catalogo">
+  <div class="card-look" *ngFor="let look of looksFiltrados" (click)="abrirModal(look)">
+    <img [src]="look.imagem" [alt]="look.nome" />
+    <div class="card-info">
+      <h3>{{ look.nome }}</h3>
+      <p>{{ look.descricao | slice: 0:50 }}...</p>
+    </div>
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal" *ngIf="lookSelecionado" id="modalLook">
+  <div class="modal-content">
+    <span class="fechar" (click)="fecharModal()">&times;</span>
+    <img [src]="lookSelecionado.imagem" [alt]="lookSelecionado.nome" id="modalImagem" />
+    <h3 id="modalTitulo">{{ lookSelecionado.nome }}</h3>
+    <p id="modalDescricao">{{ lookSelecionado.descricao }}</p>
+    <button class="btn-primary">Salvar Look</button>
+  </div>
+</div>
+
+<app-footer></app-footer>

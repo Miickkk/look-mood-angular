@@ -1,0 +1,69 @@
+<app-header-publico></app-header-publico>
+
+<canvas id="bgCanvas"></canvas>
+
+<section class="hero">
+  <h2>Bem-vindo(a) ao <strong>LOOK & MOOD</strong></h2>
+  <p>Encontre o look perfeito para cada ocasião — com base no seu humor e estilo!</p>
+</section>
+
+<section class="filters">
+  <div class="custom-select">
+    <select>
+      <option value="">Escolha seu estilo</option>
+      <option value="casual">Casual</option>
+      <option value="elegante">Elegante</option>
+      <option value="esportivo">Esportivo</option>
+      <option value="street">Streetwear</option>
+    </select>
+  </div>
+
+  <div class="custom-select">
+    <select>
+      <option value="">Escolha seu humor</option>
+      <option value="feliz">Feliz</option>
+      <option value="confiante">Confiante</option>
+      <option value="tranquilo">Tranquilo</option>
+      <option value="ousado">Ousado</option>
+    </select>
+  </div>
+</section>
+
+<section class="catalogo">
+  <div class="card-look" (click)="abrirModal(1)">
+    <img src="assets/img/look1.jpg" alt="Look Casual">
+    <div class="card-info">
+      <h3>Look Casual</h3>
+      <p>Confortável e estiloso para o dia a dia.</p>
+    </div>
+  </div>
+
+  <div class="card-look" (click)="abrirModal(2)">
+    <img src="assets/img/look2.jpg" alt="Look Elegante">
+    <div class="card-info">
+      <h3>Look Elegante</h3>
+      <p>Perfeito para eventos ou jantares sofisticados.</p>
+    </div>
+  </div>
+
+  <div class="card-look" (click)="abrirModal(3)">
+    <img src="assets/img/look3.jpg" alt="Look Streetwear">
+    <div class="card-info">
+      <h3>Look Streetwear</h3>
+      <p>Moderno e cheio de atitude para o dia a dia.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Modal de visualização -->
+<div class="modal" id="modalLook">
+  <div class="modal-content">
+    <span class="fechar" (click)="fecharModal()">&times;</span>
+    <img id="modalImg" src="" alt="Look Selecionado">
+    <h3 id="modalTitulo"></h3>
+    <p id="modalDescricao"></p>
+  </div>
+</div>
+
+
+<app-footer></app-footer>

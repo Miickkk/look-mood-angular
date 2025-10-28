@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  background: linear-gradient(180deg, #01021b 0%, #080340 40%, #0e0971 100%);
+}
+
+/* Canvas animado */
+#bgCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  margin-top: 160px;
+  padding: 60px 20px;
+}
+
+.hero h2 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #bfbfbf;
+}
+
+/* Filtros */
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 0;
+}
+
+.custom-select select {
+  width: 200px;
+  background: linear-gradient(
+    145deg,
+    rgba(8, 5, 64, 0.8),
+    rgba(14, 9, 113, 0.95)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  appearance: none;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(94, 41, 217, 0.15);
+  text-align: center;
+}
+
+/* Cards */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px 8%;
+}
+
+.card-look {
+  background: linear-gradient(160deg, #070540 0%, #080340 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 30px rgba(94, 41, 217, 0.1);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.card-look:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px #ddbfff4d;
+}
+
+.card-look img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 15px;
+}
+
+.card-info h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.card-info p {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 3, 32, 0.95);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.modal-content {
+  background: linear-gradient(160deg, #0a0748, #1c0d8e);
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 0 40px #5e29d9;
+  position: relative;
+}
+
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.fechar {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #fff;
+}

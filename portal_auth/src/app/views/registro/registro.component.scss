@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background: linear-gradient(180deg, #01021B 0%, #080340 40%, #0E0971 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.registro-container {
+  background: rgba(7, 5, 64, 0.85);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(94, 41, 217, 0.2);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.alert {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.alert-error {
+  background-color: rgba(255, 0, 0, 0.2);
+  border: 1px solid red;
+}
+
+.alert-success {
+  background-color: rgba(0, 255, 0, 0.2);
+  border: 1px solid green;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 2px solid #5e29d9;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #fff;
+  box-shadow: 0 0 5px rgba(94, 41, 217, 0.5);
+}
+
+button {
+  background: linear-gradient(90deg, #5e29d9, #0e0971);
+  border: none;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+.login-link {
+  margin-top: 20px;
+}
+
+.login-link a {
+  color: #5e29d9;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.login-link a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .registro-container {
+    padding: 30px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .registro-container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 12px 18px;
+  }
+}

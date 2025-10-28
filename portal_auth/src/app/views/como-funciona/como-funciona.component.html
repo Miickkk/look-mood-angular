@@ -1,0 +1,68 @@
+<app-header></app-header>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como Funciona | Look & Mood</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Como o Look & Mood funciona?</h2>
+    <p>Da batida à beleza — veja como transformamos música em estilo ✨</p>
+  </section>
+
+  <!-- Etapas -->
+  <section class="steps">
+    <div class="step-card">
+      <i data-lucide="music" class="icon"></i>
+      <h3>1. Escolha sua música</h3>
+      <p>Você pode se conectar ao Spotify ou escolher manualmente uma música.</p>
+      <img src="https://cdn.pixabay.com/photo/2017/08/06/00/07/concert-2585464_1280.jpg" alt="Escolher música" />
+    </div>
+
+    <div class="step-card">
+      <i data-lucide="brain" class="icon"></i>
+      <h3>2. A IA analisa o som</h3>
+      <p>Nossa IA identifica o ritmo, emoção e energia da música.</p>
+      <img src="https://cdn.pixabay.com/photo/2018/05/08/08/54/artificial-intelligence-3382507_1280.jpg"
+        alt="IA analisando" />
+    </div>
+
+    <div class="step-card">
+      <i data-lucide="sparkles" class="icon"></i>
+      <h3>3. Geração do look</h3>
+      <p>Com base na vibe musical, um look é gerado com estilo e personalidade únicos.</p>
+      <img src="https://cdn.pixabay.com/photo/2017/06/28/09/25/fashion-2449232_1280.jpg" alt="Look gerado" />
+    </div>
+
+    <div class="step-card">
+      <i data-lucide="heart" class="icon"></i>
+      <h3>4. Salve e compartilhe</h3>
+      <p>Gostou do resultado? Salve o look no seu perfil ou compartilhe com os amigos!</p>
+      <img src="https://cdn.pixabay.com/photo/2016/11/23/00/36/friends-1853496_1280.jpg" alt="Compartilhar look" />
+    </div>
+  </section>
+
+  <!-- Chamada final -->
+  <section class="cta">
+    <h2>Pronto para descobrir o seu estilo musical?</h2>
+    <p>Escolha uma música e veja o poder da IA em ação 🎶👗</p>
+    <a href="/home/index.html" class="btn-primary">Experimentar Agora</a>
+  </section>
+
+  <app-footer></app-footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+

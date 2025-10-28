@@ -1,0 +1,42 @@
+<app-header></app-header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil - Look & Mood</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <canvas id="bgCanvas"></canvas>
+
+  <!-- Perfil -->
+  <section class="profile">
+    <div class="profile-card">
+      <div class="profile-pic-container">
+        <img id="profile-pic" src="https://via.placeholder.com/150" alt="Foto de perfil" />
+        <label for="file-upload" class="upload-btn">Alterar foto</label>
+        <input type="file" id="file-upload" accept="image/*" />
+      </div>
+
+      <div class="profile-info">
+        <h2 contenteditable="true" class="editable">Seu Nome</h2>
+        <p contenteditable="true" class="editable bio">Escreva uma bio estilosa aqui ✨</p>
+
+        <div class="mood-section">
+          <h3>🎧 Música do Momento</h3>
+          <input type="text" id="music-input" placeholder="Digite o nome da música..." />
+        </div>
+
+        <div class="look-section">
+          <h3>🕶️ Estilo do Dia</h3>
+          <input type="text" id="look-input" placeholder="Ex: streetwear, indie, vintage..." />
+        </div>
+
+        <button id="save-btn" class="btn-primary">Salvar Alterações</button>
+      </div>
+    </div>
+  </section>
+
+  <app-footer></app-footer>
+</body>
+<router-outlet></router-outlet>
